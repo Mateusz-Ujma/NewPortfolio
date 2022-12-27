@@ -22,7 +22,7 @@ const Experience = ({ refExp }) => {
           <Button href="https://mateuszujmaportfolioold.netlify.app/" target="_blank">
             View
           </Button>
-          <Button href="https://github.com/Mateusz-Ujma/Portfolio" target="_blank">
+          <Button href="https://github.com/Mateusz-Ujma/MyPortfolio" target="_blank">
             Code
           </Button>
         </Image>
