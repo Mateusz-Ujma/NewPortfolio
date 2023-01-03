@@ -23,6 +23,9 @@ export const IconText = styled(NormalText)`
   display: flex;
   margin: 84px 0px 0px 0px;
   justify-content: center;
+  @media (min-width: 1024px) {
+    margin: 103px 0px 0px 0px;
+  }
 `;
 export const Icon = styled.div`
   background-image: url(${({ img }) => img});
@@ -30,4 +33,8 @@ export const Icon = styled.div`
   width: 80px;
   height: 80px;
   margin: 40px 22px 40px 22px;
+  @media (min-width: 1024px) {
+    width: 100px;
+    height: 100px;
+  }
 `;

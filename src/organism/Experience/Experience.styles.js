@@ -33,12 +33,16 @@ export const ThirdText = styled(NormalText)`
 `;
 
 export const SecondWrapper = styled(Wrapper)`
-  width: 80vw;
+  width: 75vw;
   flex-wrap: wrap;
   border-radius: 20px;
   border: 2px solid #d46c77;
   padding: 25px 8px 0 8px;
   margin: 0px 0px 60px 0;
+  @media (min-width: 1024px) {
+    width: 60%;
+    margin: 0px auto 60px auto;
+  }
 `;
 
 export const Image = styled(MockedImage)`
@@ -50,6 +54,11 @@ export const Image = styled(MockedImage)`
   margin-bottom: 70px;
   background: no-repeat center/80% url(${imgPortfolio});
   background-size: 390px;
+  @media (min-width: 1024px) {
+    width: 300px;
+
+    margin: 10px auto 70px auto;
+  }
 `;
 export const Button = styled.a`
   background-color: #f5f5f5;
@@ -65,4 +74,11 @@ export const Button = styled.a`
   margin: 200px 15px 0px 15px;
   width: 100px;
   height: 40px;
+  transition: all 0.2s;
+  @media (min-width: 1024px) {
+    &:hover {
+      background-color: #f5f5f560;
+      color: #f5f5f5;
+    }
+  }
 `;

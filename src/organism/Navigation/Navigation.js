@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Wrapper, NavigationWrapper, NavigationLink, MenuButton } from './Navigation.styles';
 
 const Navigation = ({ refHome, refSkills, refExp, refContact }) => {
@@ -6,10 +6,16 @@ const Navigation = ({ refHome, refSkills, refExp, refContact }) => {
   const handleMenuVisible = () => {
     setMenuVisible(!menuVisible);
   };
+  useEffect(() => {
+    if (window.innerWidth >= 1024) {
+      setMenuVisible(true);
+    }
+  }, []);
   const handleClick = (ref) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
     setMenuVisible(!menuVisible);
   };
+
   return (
     <Wrapper>
       <MenuButton onClick={handleMenuVisible} visible={menuVisible} />

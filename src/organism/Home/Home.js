@@ -1,17 +1,15 @@
 import React from 'react';
-import { ShadowedText } from 'atoms/ShadowedText';
-import { MainTextWrapper, MockedImage, Wrapper } from './Home.styles';
-import { NormalText } from 'atoms/NormalText';
+import { MainTextWrapper, MockedImage, Text, Wrapper, ShadowText } from './Home.styles';
 
 const Home = ({ refHome }) => {
   return (
     <Wrapper>
       <MainTextWrapper ref={refHome}>
-        <NormalText>Hello,</NormalText>
-        <NormalText>
+        <Text>Hello,</Text>
+        <Text>
           I'm<br></br>
-          <ShadowedText>M</ShadowedText>ateusz
-        </NormalText>
+          <ShadowText>M</ShadowText>ateusz
+        </Text>
       </MainTextWrapper>
       <MockedImage />
     </Wrapper>

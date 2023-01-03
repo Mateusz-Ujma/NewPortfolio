@@ -7,6 +7,13 @@ import { menuCloseBefore, menuOpenBefore } from 'Animations/MenuAnimations/Befor
 export const Wrapper = styled.div`
   position: sticky;
   top: 20px;
+  @media (min-width: 1024px) {
+    background: #d46c7755;
+    top: 0;
+    display: flex;
+    align-items: center;
+    border-right: solid 2px #d46c7755;
+  }
 `;
 
 export const MenuButton = styled.button`
@@ -18,7 +25,9 @@ export const MenuButton = styled.button`
   height: 45px;
   background-color: #f5f5f583;
   z-index: 10;
-
+  @media (min-width: 1024px) {
+    visibility: hidden;
+  }
   ::after {
     position: absolute;
     top: 15px;
@@ -79,6 +88,14 @@ export const NavigationWrapper = styled.div`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(184, 184, 184, 0.57);
+  @media (min-width: 1024px) {
+    position: relative;
+    width: 300px;
+    height: 100vh;
+    padding: 190px 0 0 0;
+    animation: none;
+  }
+
   animation: ${({ visible }) =>
     visible
       ? css`
@@ -94,4 +111,14 @@ export const NavigationLink = styled.p`
   color: #f5f5f5;
   font-size: 30px;
   font-weight: 500;
+  width: 200px;
+  @media (min-width: 1024px) {
+    left: 0;
+    margin: 45px 0px 0px 530px;
+    &:hover {
+      color: #d46c7755;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+  }
 `;
