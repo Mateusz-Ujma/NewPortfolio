@@ -8,11 +8,11 @@ export const Wrapper = styled.div`
   position: sticky;
   top: 20px;
   @media (min-width: 1024px) {
-    background: #d46c7755;
+    background: #d19c1d55;
     top: 0;
     display: flex;
     align-items: center;
-    border-right: solid 2px #d46c7755;
+    border-right: solid 2px #d19c1d;
   }
 `;
 
@@ -23,7 +23,7 @@ export const MenuButton = styled.button`
   border-radius: 150px;
   width: 45px;
   height: 45px;
-  background-color: #f5f5f583;
+  background-color: #d19c1d83;
   z-index: 10;
   @media (min-width: 1024px) {
     visibility: hidden;
@@ -34,8 +34,8 @@ export const MenuButton = styled.button`
     left: 5px;
     content: '';
     display: inline-block;
-    border: 2px solid #c83e4d;
-    background-color: #c83e4d;
+    border: 2px solid #333333;
+    background-color: #333333;
     border-radius: 3px;
 
     width: 35px;
@@ -54,8 +54,8 @@ export const MenuButton = styled.button`
     left: 5px;
     content: '';
     display: inline-block;
-    border: 2px solid #c83e4d;
-    background-color: #c83e4d;
+    border: 2px solid #333333;
+    background-color: #333333;
     border-radius: 3px;
     width: 35px;
     animation: ${({ visible }) =>
@@ -68,7 +68,7 @@ export const MenuButton = styled.button`
           `};
   }
   &:hover {
-    background-color: #d46c7755;
+    background-color: #d19c1d;
   }
 `;
 
@@ -83,14 +83,14 @@ export const NavigationWrapper = styled.div`
   flex-direction: column;
   padding: 160px 0 0 0;
   /* From https://css.glass */
-  background: #7f344277;
+  background: #fffffa77;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(184, 184, 184, 0.57);
+  border: 1px solid #d19c1d;
   @media (min-width: 1024px) {
     position: relative;
-    width: 300px;
+    width: 230px;
     height: 100vh;
     padding: 190px 0 0 0;
     animation: none;
@@ -108,15 +108,15 @@ export const NavigationWrapper = styled.div`
 export const NavigationLink = styled.p`
   margin: 45px 0px 0px 530px;
   text-decoration: none;
-  color: #f5f5f5;
+  color: #333333;
   font-size: 30px;
   font-weight: 500;
-  width: 200px;
+  width: 180px;
   @media (min-width: 1024px) {
     left: 0;
     margin: 45px 0px 0px 530px;
     &:hover {
-      color: #d46c7755;
+      color: #0a0a0a;
       cursor: pointer;
       transition: all 0.2s;
     }

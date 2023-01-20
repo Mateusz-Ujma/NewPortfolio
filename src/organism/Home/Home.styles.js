@@ -7,6 +7,9 @@ export const Wrapper = styled.div`
   flex-direction: column;
   @media (min-width: 1024px) {
     flex-direction: row;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
   }
 `;
 export const MainTextWrapper = styled.div`
@@ -20,28 +23,34 @@ export const MainTextWrapper = styled.div`
   @media (min-width: 1024px) {
     width: 100px;
     font-size: 80px;
+    padding: 0 0 0 0;
   }
 `;
 
 export const MockedImage = styled.div`
-  background-color: #d46c77;
+  background-color: #d19c1d;
   width: 280px;
   height: 280px;
   margin: 90px auto 0 auto;
-  border-radius: 50px;
+  border-radius: 20px;
   @media (min-width: 1024px) {
-    margin: 90px 220px 0 150px;
     width: 350px;
     height: 350px;
+    margin: 0px auto 0 auto;
   }
+
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.3), 10px 10px rgba(0, 0, 0, 0.2), 15px 15px rgba(0, 0, 0, 0.1), 20px 20px rgba(0, 0, 0, 0.05),
+    25px 25px rgba(0, 0, 0, 0.01);
 `;
 
 export const Text = styled(NormalText)`
+  color: #333;
   @media (min-width: 1024px) {
     font-size: 80px;
   }
 `;
 export const ShadowText = styled(ShadowedText)`
+  color: #333;
   @media (min-width: 1024px) {
     font-size: 80px;
   }

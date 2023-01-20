@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif;    
     padding: 0;
     
-    background-color: #1F2533;
+    background-color: #FFFFFA;
     display: flex;
     flex-direction:column;
     

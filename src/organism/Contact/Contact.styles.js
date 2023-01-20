@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 
 export const SecondWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   padding: 20px 10px 0 10px;
   margin: 20px auto 0 auto;
@@ -27,19 +27,40 @@ export const IconLink = styled.a`
   padding: 68px 0 0 0;
   display: flex;
   justify-content: center;
-  background: no-repeat center/90% url(${({ icon }) => icon});
+  background: no-repeat center/100% url(${({ icon }) => icon});
   width: 70px;
   height: 70px;
-  margin: 20px auto 20px auto;
+  margin: 20px 20px 20px 20px;
   text-align: center;
-  color: #f5f5f5;
+  color: #0a0a0a;
   text-decoration: none;
   font-size: 20px;
+
   @media (min-width: 1024px) {
     margin: 20px;
+    ${({ isMail }) => (isMail ? 'border-radius: 10px;' : 'border-radius: 70px;')}
+
     &:hover {
-      border: 1px solid #f5f5f500;
-      border-radius: 10px;
+      ${({ isMail }) =>
+        isMail
+          ? `&::before {
+        content: '';
+        margin-top: -68px;
+        
+        width: 70px;
+        height: 70px;
+        background-color: #d19c1d00;
+        border-radius: 70px;
+      }`
+          : `&::before {
+        content: '';
+        margin-top: -68px;
+        
+        width: 70px;
+        height: 70px;
+        background-color: #d19c1d30;
+        border-radius: 70px;
+      }`}
     }
   }
 `;

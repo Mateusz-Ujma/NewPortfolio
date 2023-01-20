@@ -7,6 +7,11 @@ export const Wrapper = styled.div`
   justify-content: center;
   padding: 60px 50px 0 50px;
   margin-top: 80px;
+  @media (min-width: 1024px) {
+    padding: 0px 50px 0 50px;
+    margin: 0px 0px 0px 0px;
+    margin-top: 0px;
+  }
 `;
 export const IconWrapper = styled.div`
   display: flex;
@@ -36,5 +41,6 @@ export const Icon = styled.div`
   @media (min-width: 1024px) {
     width: 100px;
     height: 100px;
+    margin: 40px 40px 40px 40px;
   }
 `;

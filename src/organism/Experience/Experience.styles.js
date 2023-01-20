@@ -33,14 +33,14 @@ export const ThirdText = styled(NormalText)`
 `;
 
 export const SecondWrapper = styled(Wrapper)`
-  width: 75vw;
+  width: 80vw;
   flex-wrap: wrap;
-  border-radius: 20px;
-  border: 2px solid #d46c77;
+  background-color: #d19c1d55;
+  border-radius: 15px;
   padding: 25px 8px 0 8px;
   margin: 0px 0px 60px 0;
   @media (min-width: 1024px) {
-    width: 60%;
+    width: 80%;
     margin: 0px auto 60px auto;
   }
 `;
@@ -54,6 +54,7 @@ export const Image = styled(MockedImage)`
   margin-bottom: 70px;
   background: no-repeat center/80% url(${imgPortfolio});
   background-size: 390px;
+  box-shadow: none;
   @media (min-width: 1024px) {
     width: 300px;
 
@@ -61,12 +62,12 @@ export const Image = styled(MockedImage)`
   }
 `;
 export const Button = styled.a`
-  background-color: #f5f5f5;
+  background-color: #fffffa;
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #d46c77;
+  color: #d19c1d;
   border: none;
   border-radius: 20px;
   font-size: 17px;
