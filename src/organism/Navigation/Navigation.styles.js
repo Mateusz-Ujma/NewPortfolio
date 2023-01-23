@@ -7,12 +7,13 @@ import { menuCloseBefore, menuOpenBefore } from 'Animations/MenuAnimations/Befor
 export const Wrapper = styled.div`
   position: sticky;
   top: 20px;
+  z-index: 10;
   @media (min-width: 1024px) {
-    background: #d19c1d55;
+    background: #1b9d5155;
     top: 0;
     display: flex;
     align-items: center;
-    border-right: solid 2px #d19c1d;
+    border-right: solid 2px #1b9d51;
   }
 `;
 
@@ -23,7 +24,7 @@ export const MenuButton = styled.button`
   border-radius: 150px;
   width: 45px;
   height: 45px;
-  background-color: #d19c1d83;
+  background-color: #33333383;
   z-index: 10;
   @media (min-width: 1024px) {
     visibility: hidden;
@@ -34,8 +35,8 @@ export const MenuButton = styled.button`
     left: 5px;
     content: '';
     display: inline-block;
-    border: 2px solid #333333;
-    background-color: #333333;
+    border: 2px solid #1b9d51;
+    background-color: #1b9d51;
     border-radius: 3px;
 
     width: 35px;
@@ -54,8 +55,8 @@ export const MenuButton = styled.button`
     left: 5px;
     content: '';
     display: inline-block;
-    border: 2px solid #333333;
-    background-color: #333333;
+    border: 2px solid #1b9d51;
+    background-color: #1b9d51;
     border-radius: 3px;
     width: 35px;
     animation: ${({ visible }) =>
@@ -68,26 +69,26 @@ export const MenuButton = styled.button`
           `};
   }
   &:hover {
-    background-color: #d19c1d;
+    background-color: #333333;
   }
 `;
 
 export const NavigationWrapper = styled.div`
   position: absolute;
   z-index: -9;
-  left: -500px;
+  left: -400px;
   top: -30px;
-  width: 200vw;
+  width: 190vw;
   height: 110vh;
   display: flex;
   flex-direction: column;
   padding: 160px 0 0 0;
   /* From https://css.glass */
-  background: #fffffa77;
+  background: #fffffa40;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid #d19c1d;
+  border: 1px solid #1b9d51;
   @media (min-width: 1024px) {
     position: relative;
     width: 230px;
@@ -106,11 +107,11 @@ export const NavigationWrapper = styled.div`
         `};
 `;
 export const NavigationLink = styled.p`
-  margin: 45px 0px 0px 530px;
+  margin: 45px 0px 0px 430px;
   text-decoration: none;
   color: #333333;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 700;
   width: 180px;
   @media (min-width: 1024px) {
     left: 0;

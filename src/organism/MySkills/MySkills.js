@@ -1,11 +1,14 @@
 import React from 'react';
-import { Icon, IconText, IconWrapper, MainText, Wrapper } from './MySkills.styles';
+import { Icon, IconText, IconWrapper, MainText, TriangleL, TriangleR, Wrapper } from './MySkills.styles';
 import { Icons } from 'assets/icons/Icons';
+import img from 'assets/images/triangleWhiteShadow.png';
 
 const MySkills = ({ refSkills }) => {
   return (
     <Wrapper ref={refSkills}>
-      <MainText>My Skills</MainText>
+      <TriangleR src={img} />
+      <TriangleL src={img} />
+      <MainText>Technologie</MainText>
       <IconWrapper>
         <Icon img={Icons.HTML}>
           <IconText>HTML</IconText>

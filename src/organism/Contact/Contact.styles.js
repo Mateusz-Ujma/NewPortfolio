@@ -7,6 +7,9 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #1b9d51;
+  z-index: 1;
+  padding-bottom: 50px;
 `;
 
 export const SecondWrapper = styled.div`
@@ -21,6 +24,7 @@ export const SecondWrapper = styled.div`
 `;
 export const MainText = styled(NormalText)`
   margin: 0 auto 60px auto;
+  color: #fffffa;
 `;
 
 export const IconLink = styled.a`
@@ -35,6 +39,7 @@ export const IconLink = styled.a`
   color: #0a0a0a;
   text-decoration: none;
   font-size: 20px;
+  color: #fffffa;
 
   @media (min-width: 1024px) {
     margin: 20px;

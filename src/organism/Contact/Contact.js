@@ -5,7 +5,7 @@ import { Icons } from 'assets/icons/Icons';
 const Contact = ({ refContact }) => {
   return (
     <Wrapper ref={refContact}>
-      <MainText>Contact</MainText>
+      <MainText>Kontakt</MainText>
       <SecondWrapper>
         <IconLink href="https://www.linkedin.com/in/mateusz-ujma/" icon={Icons.LINKEDIN} isMail={false}></IconLink>
         <IconLink href="https://github.com/Mateusz-Ujma" icon={Icons.GITHUB} isMail={false}></IconLink>

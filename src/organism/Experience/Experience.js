@@ -1,23 +1,25 @@
 import React from 'react';
-import { Wrapper, MainText, SecondText, ThirdText, MidText, SecondWrapper, Image, Button } from './Experience.styles';
+import { Wrapper, MainText, SecondText, ThirdText, MidText, SecondWrapper, Image, Button, TriangleL, TriangleR } from './Experience.styles';
+import img from 'assets/images/triangle.png';
 
 const Experience = ({ refExp }) => {
   return (
     <Wrapper ref={refExp}>
-      <MainText>Experience</MainText>
-      <MidText>Work</MidText>
+      <TriangleR src={img} />
+      <TriangleL src={img} />
+      <MainText>Doświadczenie</MainText>
+      <MidText isLeft={true}>2020-2022</MidText>
       <SecondWrapper>
-        <SecondText>2020-2022</SecondText>
         <SecondText>Giganci Programowania</SecondText>
-        <ThirdText>Programming teacher/trainer</ThirdText>
+        <ThirdText>Nauczyciel/Trener Programowania</ThirdText>
         <ThirdText>
-          While working at Giganci Programowania, I dealt with teaching children and teenagers the basics and more advanced concepts of programming in
-          C#, creating websites with HTML/CSS/Javascript and creating computer and mobile 2D/3D games with Unity 3D.
+          Pracując w Gigantach Programowania zajmowałem się uczeniem dzieci oraz młodzieży podstaw oraz bardziej zaawansowanych pojęć programowania w
+          języku C#, tworzenia stron z pomocą HTML/CSS/JavaScript oraz tworzenia gier komputerowych oraz mobilnych przy użyciu Unity3D.
         </ThirdText>
       </SecondWrapper>
-      <MidText>Projects</MidText>
+      <MidText isLeft={false}>Projekty</MidText>
       <SecondWrapper>
-        <SecondText>My first Portfolio</SecondText>
+        <SecondText>Moje pierwsze portfolio</SecondText>
         <Image>
           <Button href="https://mateuszujmaportfolioold.netlify.app/" target="_blank">
             View

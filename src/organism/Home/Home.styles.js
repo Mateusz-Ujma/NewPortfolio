@@ -4,7 +4,10 @@ import { ShadowedText } from 'atoms/ShadowedText';
 
 export const Wrapper = styled.div`
   display: flex;
+  height: 100vh;
+  width: 100vw;
   flex-direction: column;
+  background-color: #1b9d51;
   @media (min-width: 1024px) {
     flex-direction: row;
     height: 100vh;
@@ -26,9 +29,26 @@ export const MainTextWrapper = styled.div`
     padding: 0 0 0 0;
   }
 `;
-
+export const TriangleRight = styled.img`
+  position: absolute;
+  top: 20px;
+  right: -10px;
+  rotate: -90deg;
+  width: 100px;
+  height: 80px;
+  opacity: 1;
+`;
+export const TriangleLeft = styled.img`
+  position: absolute;
+  top: 300px;
+  left: -20px;
+  rotate: 90deg;
+  width: 100px;
+  height: 80px;
+  opacity: 1;
+`;
 export const MockedImage = styled.div`
-  background-color: #d19c1d;
+  background-color: #fffffa;
   width: 280px;
   height: 280px;
   margin: 90px auto 0 auto;
@@ -44,7 +64,16 @@ export const MockedImage = styled.div`
 `;
 
 export const Text = styled(NormalText)`
-  color: #333;
+  color: #fffffa;
+  text-shadow: 1px 1px 2px rgba(66, 68, 90, 1);
+  @media (min-width: 1024px) {
+    font-size: 80px;
+  }
+`;
+export const SecondText = styled(NormalText)`
+  color: #fffffa;
+  font-size: 50px;
+  text-shadow: 1px 1px 2px rgba(66, 68, 90, 1);
   @media (min-width: 1024px) {
     font-size: 80px;
   }

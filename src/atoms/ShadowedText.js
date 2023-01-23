@@ -4,5 +4,5 @@ export const ShadowedText = styled.span`
   margin: 0 2px 0 0;
   font-size: 64px;
   color: #333333;
-  text-shadow: 3px 0px 0px #d19c1d;
+  text-shadow: 3px 0px 0px #fffffa;
 `;
