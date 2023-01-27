@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import cursorImg from 'assets/images/pointer.png';
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -9,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    
+    cursor: url(${cursorImg}),auto;
     margin: 0;
     font-family: 'Montserrat', sans-serif;    
     padding: 0;
@@ -17,7 +18,9 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #FFFFFA;
     display: flex;
     flex-direction:column;
-    
+    @media (min-width: 1024px) {
+    overflow-x:hidden;
+  }
   }
   a, button {
     font-family: 'Montserrat', sans-serif;

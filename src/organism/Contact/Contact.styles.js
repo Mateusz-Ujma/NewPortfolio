@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { NormalText } from 'atoms/NormalText';
-import { Icons } from 'assets/icons/Icons';
+import cursorImg from 'assets/images/pointer.png';
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1b9d51;
+  background-color: #1b9d5c;
   z-index: 1;
   padding-bottom: 50px;
 `;
@@ -18,7 +18,7 @@ export const SecondWrapper = styled.div`
   justify-content: center;
   padding: 20px 10px 0 10px;
   margin: 20px auto 0 auto;
-  @media (min-width: 1024px) {
+  @media (min-width: 762px) {
     flex-direction: row;
   }
 `;
@@ -41,7 +41,7 @@ export const IconLink = styled.a`
   font-size: 20px;
   color: #fffffa;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 762px) {
     margin: 20px;
     ${({ isMail }) => (isMail ? 'border-radius: 10px;' : 'border-radius: 70px;')}
 
@@ -60,10 +60,10 @@ export const IconLink = styled.a`
           : `&::before {
         content: '';
         margin-top: -68px;
-        
+        cursor: url(${cursorImg}), auto;
         width: 70px;
         height: 70px;
-        background-color: #d19c1d30;
+        background-color: #1b9d5c30;
         border-radius: 70px;
       }`}
     }

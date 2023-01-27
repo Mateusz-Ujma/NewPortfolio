@@ -4,10 +4,11 @@ import { Icons } from 'assets/icons/Icons';
 import img from 'assets/images/triangleWhiteShadow.png';
 
 const MySkills = ({ refSkills }) => {
+  const windowWidth = window.innerWidth;
   return (
     <Wrapper ref={refSkills}>
-      <TriangleR src={img} />
-      <TriangleL src={img} />
+      {windowWidth > 762 ? null : <TriangleR src={img} />}
+      {windowWidth > 762 ? null : <TriangleL src={img} />}
       <MainText>Technologie</MainText>
       <IconWrapper>
         <Icon img={Icons.HTML}>

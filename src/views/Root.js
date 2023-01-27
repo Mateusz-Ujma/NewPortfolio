@@ -9,7 +9,6 @@ import Footer from 'organism/Footer/Footer';
 import AboutMe from 'organism/AboutMe/AboutMe';
 
 const Root = () => {
-  const refHome = useRef(null);
   const refSkills = useRef(null);
   const refExp = useRef(null);
   const refContact = useRef(null);
@@ -17,10 +16,10 @@ const Root = () => {
   return (
     <Wrapper>
       <SecondWrapper>
-        <Navigation refHome={refHome} refSkills={refSkills} refExp={refExp} refContact={refContact} refAbout={refAbout} />
+        <Navigation refSkills={refSkills} refExp={refExp} refContact={refContact} refAbout={refAbout} />
       </SecondWrapper>
       <SecondWrapper>
-        <Home refHome={refHome} />
+        <Home />
         <MySkills refSkills={refSkills} />
         <Experience refExp={refExp} />
         <AboutMe refAbout={refAbout} />

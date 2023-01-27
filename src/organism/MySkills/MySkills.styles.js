@@ -9,15 +9,14 @@ export const Wrapper = styled.div`
   padding: 60px 50px 40px 50px;
   z-index: -1;
   width: 100vw;
-  background-color: #1b9d51;
+  background-color: #1b9d5c;
   position: relative;
   -webkit-box-shadow: 0px 15px 10px 1px #777;
   -moz-box-shadow: 0px 15px 10px 1px #777;
   box-shadow: 0px 5px 10px 1px #777;
-  @media (min-width: 1024px) {
-    padding: 0px 50px 0 50px;
+  @media (min-width: 762px) {
+    padding: 0px 50px 30px 50px;
     margin: 0px 0px 0px 0px;
-    margin-top: 0px;
   }
 `;
 export const IconWrapper = styled.div`
@@ -28,7 +27,7 @@ export const IconWrapper = styled.div`
 `;
 
 export const MainText = styled(NormalText)`
-  margin: 0 auto 60px auto;
+  margin: 0 auto 25px auto;
   color: #fffffa;
 `;
 export const IconText = styled(NormalText)`
@@ -37,7 +36,7 @@ export const IconText = styled(NormalText)`
   margin: 84px 0px 0px 0px;
   justify-content: center;
   color: #fffffa;
-  @media (min-width: 1024px) {
+  @media (min-width: 762px) {
     margin: 103px 0px 0px 0px;
   }
 `;
@@ -47,7 +46,7 @@ export const Icon = styled.div`
   width: 80px;
   height: 80px;
   margin: 40px 22px 40px 22px;
-  @media (min-width: 1024px) {
+  @media (min-width: 762px) {
     width: 100px;
     height: 100px;
     margin: 40px 40px 40px 40px;

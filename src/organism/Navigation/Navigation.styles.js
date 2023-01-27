@@ -3,17 +3,17 @@ import { slideLeftAnimation } from 'Animations/SlideAnimations/slideLeftAnimatio
 import { slideRightAnimation } from 'Animations/SlideAnimations/slideRightAnimation';
 import { menuCloseAfter, menuOpenAfter } from 'Animations/MenuAnimations/After/menuAfterAnimations';
 import { menuCloseBefore, menuOpenBefore } from 'Animations/MenuAnimations/Before/menuBeforeAnimations';
+import cursorImg from 'assets/images/pointer.png';
 
 export const Wrapper = styled.div`
   position: sticky;
   top: 20px;
-  z-index: 10;
-  @media (min-width: 1024px) {
-    background: #1b9d5155;
+  z-index: 20;
+  @media (min-width: 762px) {
+    position: absolute;
     top: 0;
     display: flex;
     align-items: center;
-    border-right: solid 2px #1b9d51;
   }
 `;
 
@@ -25,8 +25,8 @@ export const MenuButton = styled.button`
   width: 45px;
   height: 45px;
   background-color: #33333383;
-  z-index: 10;
-  @media (min-width: 1024px) {
+  z-index: 20;
+  @media (min-width: 762px) {
     visibility: hidden;
   }
   ::after {
@@ -89,12 +89,22 @@ export const NavigationWrapper = styled.div`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid #1b9d51;
-  @media (min-width: 1024px) {
-    position: relative;
-    width: 230px;
-    height: 100vh;
-    padding: 190px 0 0 0;
+  @media (min-width: 762px) {
+    left: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    padding: 0;
     animation: none;
+    border: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    padding-right: 40px;
+    background: #fffffa00;
   }
 
   animation: ${({ visible }) =>
@@ -113,13 +123,20 @@ export const NavigationLink = styled.p`
   font-size: 30px;
   font-weight: 700;
   width: 180px;
-  @media (min-width: 1024px) {
+  @media (min-width: 762px) {
     left: 0;
-    margin: 45px 0px 0px 530px;
+    font-weight: 500;
+    font-size: 17px;
+    margin: 10px 20px 0px 20px;
+    width: auto;
     &:hover {
-      color: #0a0a0a;
-      cursor: pointer;
+      color: #000;
+
       transition: all 0.2s;
+      cursor: url(${cursorImg}), auto;
     }
+  }
+  @media (min-width: 1440px) {
+    font-size: 19px;
   }
 `;
