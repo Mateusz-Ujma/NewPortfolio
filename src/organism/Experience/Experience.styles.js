@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   padding: 60px 0 0 0;
   margin: 30px 0 0 0;
-  width: 100vw;
+  width: 100%;
 `;
 
 export const MainText = styled(NormalText)`
@@ -75,7 +75,7 @@ export const ThirdText = styled(NormalText)`
 `;
 
 export const SecondWrapper = styled(Wrapper)`
-  width: 85vw;
+  width: 100%;
   flex-wrap: wrap;
   flex-direction: ${({ isProjects }) => (isProjects ? 'row' : 'column')};
   align-self: ${({ isLeft }) => (isLeft ? 'flex-start' : 'flex-end')};
@@ -141,11 +141,11 @@ export const Button = styled.a`
 `;
 
 export const TriangleL = styled(TriangleLeft)`
-  left: -10;
+  left: 0;
   top: 800px;
 `;
 
 export const TriangleR = styled(TriangleRight)`
-  left: -10;
+  right: -10px;
   top: 180px;
 `;

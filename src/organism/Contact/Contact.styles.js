@@ -10,62 +10,46 @@ export const Wrapper = styled.div`
   background-color: #1b9d5c;
   z-index: 1;
   padding-bottom: 50px;
+  width: 100%;
 `;
 
-export const SecondWrapper = styled.div`
+export const MainText = styled(NormalText)`
+  margin: 0 auto 30px auto;
+  color: #fffffa;
+`;
+
+export const FormWrapper = styled.form`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  padding: 20px 10px 0 10px;
-  margin: 20px auto 0 auto;
-  @media (min-width: 762px) {
-    flex-direction: row;
+  width: 80vw;
+  & input,
+  textarea,
+  button {
+    margin: 2px 0px 4px 0px;
+    background-color: #fffffa;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #333333;
+    font-size: 17px;
+    padding: 4px;
   }
 `;
-export const MainText = styled(NormalText)`
-  margin: 0 auto 60px auto;
-  color: #fffffa;
-`;
 
-export const IconLink = styled.a`
-  padding: 68px 0 0 0;
+export const SecondFormWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  background: no-repeat center/100% url(${({ icon }) => icon});
-  width: 70px;
-  height: 70px;
-  margin: 20px 20px 20px 20px;
-  text-align: center;
-  color: #0a0a0a;
-  text-decoration: none;
-  font-size: 20px;
-  color: #fffffa;
-
-  @media (min-width: 762px) {
-    margin: 20px;
-    ${({ isMail }) => (isMail ? 'border-radius: 10px;' : 'border-radius: 70px;')}
-
-    &:hover {
-      ${({ isMail }) =>
-        isMail
-          ? `&::before {
-        content: '';
-        margin-top: -68px;
-        
-        width: 70px;
-        height: 70px;
-        background-color: #d19c1d00;
-        border-radius: 70px;
-      }`
-          : `&::before {
-        content: '';
-        margin-top: -68px;
-        cursor: url(${cursorImg}), auto;
-        width: 70px;
-        height: 70px;
-        background-color: #1b9d5c30;
-        border-radius: 70px;
-      }`}
+  & input {
+    @media (min-width: 762px) {
+      width: 50%;
     }
+  }
+  @media (min-width: 762px) {
+    flex-direction: row;
+    gap: 10px;
   }
 `;

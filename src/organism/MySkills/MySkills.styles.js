@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   padding: 60px 50px 40px 50px;
   z-index: -1;
-  width: 100vw;
+  width: 100%;
   background-color: #1b9d5c;
   position: relative;
   -webkit-box-shadow: 0px 15px 10px 1px #777;
@@ -53,7 +53,7 @@ export const Icon = styled.div`
   }
 `;
 export const TriangleL = styled(TriangleLeft)`
-  left: -10;
+  left: 0;
   top: 500px;
 `;
 export const TriangleR = styled(TriangleRight)`

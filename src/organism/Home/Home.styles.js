@@ -2,12 +2,14 @@ import styled from 'styled-components';
 import { NormalText } from 'atoms/NormalText';
 import { ShadowedText } from 'atoms/ShadowedText';
 
+import cursorImg from 'assets/images/pointer.png';
+
 export const Wrapper = styled.div`
   display: flex;
   height: 100vh;
-  width: 100vw;
   flex-direction: column;
   background-color: #1b9d5c;
+  width: 100%;
   @media (min-width: 762px) {
     background-color: #fffffa;
     flex-direction: row;
@@ -16,6 +18,26 @@ export const Wrapper = styled.div`
     align-items: center;
     margin: 0;
     z-index: 0;
+  }
+`;
+export const SecondWrapper = styled.div`
+  display: flex;
+  position: absolute;
+  top: 60px;
+  right: -10px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 10px 0 10px;
+  margin: 20px auto 0 auto;
+  @media (min-width: 762px) {
+    flex-direction: column;
+    top: 140px;
+    right: -10px;
+  }
+  @media (min-width: 1440px) {
+    flex-direction: column;
+    top: 190px;
+    right: -10px;
   }
 `;
 
@@ -57,7 +79,7 @@ export const MainTextWrapper = styled.div`
 export const TriangleRight = styled.img`
   position: absolute;
   top: 20px;
-  right: -10px;
+  right: -20px;
   rotate: -90deg;
   width: 100px;
   height: 80px;
@@ -66,7 +88,7 @@ export const TriangleRight = styled.img`
 export const TriangleLeft = styled.img`
   position: absolute;
   top: 300px;
-  left: -20px;
+  left: -10px;
   rotate: 90deg;
   width: 100px;
   height: 80px;
@@ -81,7 +103,7 @@ export const MockedImage = styled.div`
   @media (min-width: 762px) {
     width: 350px;
     height: 350px;
-    margin: 50px 120px 0 50px;
+    margin: 50px 250px 0 50px;
   }
   @media (min-width: 1440px) {
     margin: 50px 300px 0 50px;
@@ -121,4 +143,54 @@ export const Triangle = styled.img`
   width: 100px;
   height: 80px;
   opacity: 1;
+`;
+export const IconLink = styled.a`
+  padding: 68px 0 0 0;
+  display: flex;
+  justify-content: center;
+  background: no-repeat center/100% url(${({ icon }) => icon});
+  width: 55px;
+  height: 55px;
+  margin: 10px 0px 0px 0px;
+  text-align: center;
+  color: #0a0a0a;
+  text-decoration: none;
+  font-size: 20px;
+  color: #fffffa;
+
+  @media (min-width: 762px) {
+    padding: 68px 0 0 0;
+    width: 80px;
+    height: 80px;
+    margin: 20px px 0px 0px;
+
+    &:hover {
+      &::before {
+        content: '';
+        margin-top: -68px;
+        cursor: url(${cursorImg}), auto;
+        width: 70px;
+        height: 70px;
+        background-color: #1b9d5c30;
+        border-radius: 10px;
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    width: 80px;
+    height: 80px;
+    margin: 40px 0px 0px 0px;
+
+    &:hover {
+      &::before {
+        content: '';
+        margin-top: -68px;
+        cursor: url(${cursorImg}), auto;
+        width: 70px;
+        height: 70px;
+        background-color: #1b9d5c30;
+        border-radius: 10px;
+      }
+    }
+  }
 `;

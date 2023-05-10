@@ -15,9 +15,7 @@ const Root = () => {
   const refAbout = useRef(null);
   return (
     <Wrapper>
-      <SecondWrapper>
-        <Navigation refSkills={refSkills} refExp={refExp} refContact={refContact} refAbout={refAbout} />
-      </SecondWrapper>
+      <Navigation refSkills={refSkills} refExp={refExp} refContact={refContact} refAbout={refAbout} />
       <SecondWrapper>
         <Home />
         <MySkills refSkills={refSkills} />

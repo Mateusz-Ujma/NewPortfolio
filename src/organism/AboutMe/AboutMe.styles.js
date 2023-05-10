@@ -9,12 +9,13 @@ export const Wrapper = styled.div`
   justify-content: center;
   padding: 40px 0 80px 0;
   margin: 30px 0 0 0;
-  width: 100vw;
+
   background-color: #1b9d5c;
   position: relative;
   -webkit-box-shadow: 0px -5px 10px 1px #777;
   -moz-box-shadow: 0px -5px 10px 1px #777;
   box-shadow: 0px -5px 10px 1px #777;
+  width: 100%;
 `;
 
 export const SecondWrapper = styled(Wrapper)`
@@ -54,13 +55,13 @@ export const SecondText = styled(NormalText)`
 `;
 
 export const TriangleL = styled(TriangleLeft)`
-  left: -10;
+  left: 0;
   top: 650px;
   z-index: 10;
 `;
 
 export const TriangleR = styled(TriangleRight)`
-  left: -10;
+  right: -10px;
   top: 280px;
   z-index: 10;
 `;

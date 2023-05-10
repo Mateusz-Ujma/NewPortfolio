@@ -6,20 +6,32 @@ import { menuCloseBefore, menuOpenBefore } from 'Animations/MenuAnimations/Befor
 import cursorImg from 'assets/images/pointer.png';
 
 export const Wrapper = styled.div`
-  position: sticky;
+  position: fixed;
   top: 20px;
+  left: 20px;
   z-index: 20;
-  @media (min-width: 762px) {
-    position: absolute;
-    top: 0;
-    display: flex;
-    align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  .sticky {
+    bottom: 20px;
+    right: 20px;
+    margin: 40px;
+  }
+  .sticky-nav {
+    background: #33333360;
+  }
+  .sticky-link {
+    color: #fffffa;
+    &:hover {
+      color: #333;
+    }
   }
 `;
 
 export const MenuButton = styled.button`
   position: absolute;
-  left: 25px;
+
   border: none;
   border-radius: 150px;
   width: 45px;
@@ -89,6 +101,7 @@ export const NavigationWrapper = styled.div`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid #1b9d51;
+
   @media (min-width: 762px) {
     left: 0;
     flex-direction: row;
@@ -96,15 +109,16 @@ export const NavigationWrapper = styled.div`
     position: absolute;
     top: 0;
     width: 100vw;
-    height: 50px;
-    padding: 0;
+    height: 70px;
+    padding: 10px;
     animation: none;
     border: none;
     box-shadow: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     padding-right: 40px;
-    background: #fffffa00;
+    background: #33333300;
+    margin: -20px;
   }
 
   animation: ${({ visible }) =>
@@ -125,12 +139,14 @@ export const NavigationLink = styled.p`
   width: 180px;
   @media (min-width: 762px) {
     left: 0;
+    color: #333;
     font-weight: 500;
     font-size: 17px;
     margin: 10px 20px 0px 20px;
     width: auto;
+
     &:hover {
-      color: #000;
+      color: #fffffa;
 
       transition: all 0.2s;
       cursor: url(${cursorImg}), auto;
